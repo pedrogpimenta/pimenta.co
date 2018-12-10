@@ -1,0 +1,46 @@
+{
+  "name": "pimenta-builder",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Pimenta",
+  "private": true,
+  "engines": {
+    "node": "8.1.4"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "browser-sync": "^2.18.8",
+    "chdir": "^0.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.11.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-cli": "^2.0.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-metalsmith": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-svg-sprite": "^1.3.6",
+    "gulp-uglify": "^3.0.0",
+    "jstransformer-markdown-it": "^2.1.0",
+    "marked": "^0.3.6",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-html-minifier": "^2.2.0",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-pug": "^2.0.0",
+    "metalsmith-sitemap": "^1.2.0",
+    "run-sequence": "^1.2.2"
+  },
+  "devDepedencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
