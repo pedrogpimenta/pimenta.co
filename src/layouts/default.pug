@@ -1,0 +1,22 @@
+include ../partials/mixins.pug
+doctype html
+html
+  head
+    include ../partials/meta.pug
+    //- include ../partials/favicon.pug
+    title Pedro Pimenta
+    link(
+      href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600'
+    rel='stylesheet')
+    link(
+      href='/assets/css/main.css'
+      rel='stylesheet'
+      type='text/css')
+  //- body(class='page ' + classes)
+  body
+    //- +grid-helper
+    //- include ../partials/sprites.svg
+    //- include ../partials/cookies.pug
+    block content
+    //- include ../partials/footer.pug
+    //- script(src='/assets/scripts/main.js')
