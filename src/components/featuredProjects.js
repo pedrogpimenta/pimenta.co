@@ -23,12 +23,16 @@ const FeaturedProjects = ({ sectionTitle }) => {
   `)
   
   const flickityShouldDrag = () => {
-    const projectsLength = data.allStrapiProjects.nodes.length
-    const projectWidth = 288
-    const flickityWidth = (projectWidth * projectsLength) + (8 * 2 * projectsLength) + (8 * 2)
-    const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-    return flickityWidth > viewportWidth
+    if (typeof window !== `undefined`) {
+      const projectsLength = data.allStrapiProjects.nodes.length
+      const projectWidth = 288
+      const flickityWidth = (projectWidth * projectsLength) + (8 * 2 * projectsLength) + (8 * 2)
+      const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  
+      return flickityWidth > viewportWidth
+    } else {
+      return true
+    }
   }
 
   const flickityOptions = {
