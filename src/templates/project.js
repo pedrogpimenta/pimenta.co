@@ -1,6 +1,7 @@
 import React from "react"
 import { navigate, graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const handleMainClick = () => {
   navigate(`/`)
@@ -8,6 +9,7 @@ const handleMainClick = () => {
 
 const ProjectTemplate = ({ data }) => (
   <Layout>
+    <SEO title={data.strapiProjects.Title} />
     <main className={`
       absolute
       top-0
