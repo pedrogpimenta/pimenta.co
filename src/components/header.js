@@ -28,7 +28,7 @@ const Header = ({ siteTitle, siteSubtitle, socialLinks }) => (
               <a
                 href={link.URL}
                 title={link.Text}
-                target= {link.Target}
+                target={link.Target}
               >
                 <img src={link.Icon.publicURL} alt={link.Text}></img>
               </a>

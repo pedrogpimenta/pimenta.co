@@ -14,6 +14,7 @@ import FeaturedProjects from "./featuredProjects"
 import AboutMe from "./aboutMe"
 import WorkHistory from "./workHistory"
 import Blog from "./blog"
+
 import "typeface-ibm-plex-sans"
 import "../assets/main.css"
 
