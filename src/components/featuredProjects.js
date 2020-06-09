@@ -67,7 +67,7 @@ const FeaturedProjects = ({ sectionTitle }) => {
             return (
               <div
                 key={project.id}
-                className={`box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8 mt-4`}
+                className={`box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8`}
                 >
                 <Link to={`/project/${slugify(project.Title)}`}>
                   <img

@@ -9,7 +9,7 @@ p {
 }
 
 .section__title {
-  @apply leading-none text-2xl font-light text-textSecondary mb-4 mx-4;
+  @apply leading-none text-2xl font-light text-textSecondary mb-6 mx-4;
 }
 
 .section__content {
@@ -44,7 +44,7 @@ p {
   }
 
   .section__title {
-    @apply mx-8;
+    @apply mx-8 mb-8;
   }
 
   .section__content {

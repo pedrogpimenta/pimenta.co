@@ -72,7 +72,7 @@ const ProjectTemplate = ({ data }) => (
                 return (
                   <li
                     key={link.id}
-                    className={`inline-block pr-4`}
+                    className={`block py-1`}
                   >
                     <a
                       href={link.URL}
