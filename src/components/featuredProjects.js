@@ -12,6 +12,7 @@ const FeaturedProjects = ({ sectionTitle }) => {
       allStrapiProjects {
         nodes {
           id,
+          Published,
           Title,
           Description,
           FeaturedImage {
@@ -64,6 +65,7 @@ const FeaturedProjects = ({ sectionTitle }) => {
           static // default false
         >
           {data.allStrapiProjects.nodes.map((project, index) => {
+            if (process.env.NODE_ENV === 'production' && !project.Published) return false
             return (
               <div
                 key={project.id}
