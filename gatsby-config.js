@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://pimenta-strapi.herokuapp.com`,
+        apiURL: `https://admin.pimenta.co`,
         queryLimit: 100, // Default to 100
         contentTypes: [`projects`],
         //If using single types place them in this array.
