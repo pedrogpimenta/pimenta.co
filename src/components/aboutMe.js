@@ -9,7 +9,7 @@ const aboutMe = ({ aboutMeTitle, aboutMeContent, aboutMeSkills }) => (
     </h1>
     <div className={`section__content`}>
       <ReactMarkdown
-        className={`text-gray-800`}
+        className={`text-textPrimary dark:text-gray-100`}
         source={aboutMeContent}
       />
       <ul>
@@ -18,10 +18,12 @@ const aboutMe = ({ aboutMeTitle, aboutMeContent, aboutMeSkills }) => (
             <li key={skill.id}
               className={`
                 inline-block
-                bg-gray-800
+                bg-textPrimary
+                dark:bg-gray-100
                 rounded-full
                 px-2
                 text-white
+                dark:text-textPrimary
                 mr-1
                 mb-2
             `}>

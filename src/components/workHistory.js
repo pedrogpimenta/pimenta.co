@@ -14,10 +14,10 @@ const WorkHistory = ({ workHistoryTitle, jobs }) => (
               <div className={`tracking-wide font-bold text-sm text-textSecondary`}>
                 {job.YearsWorked}
               </div>
-              <div className={`leading-sm font-bold text-2xl text-gray-800`}>
+              <div className={`leading-sm font-bold text-2xl text-textPrimary dark:text-gray-100`}>
                 {job.CompanyName}
               </div>
-              <div className={``}>
+              <div className={`text-textSecondary`}>
                 {job.Position}
               </div>
             </li>

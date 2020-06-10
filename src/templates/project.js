@@ -52,6 +52,8 @@ const ProjectTemplate = ({ data }) => (
         </div>
         <div>
         <h1 className={`
+          text-textPrimary 
+          dark:text-gray-100
           text-2xl
           font-semibold
           mt-4 sm:mt-0
@@ -86,6 +88,8 @@ const ProjectTemplate = ({ data }) => (
                       />
                       <span
                         className={`
+                          text-textPrimary
+                          dark:text-gray-100
                           font-bold
                           ml-2
                         `}
@@ -99,6 +103,8 @@ const ProjectTemplate = ({ data }) => (
         }
         </div>
         <div className={`
+          text-textPrimary 
+          dark:text-gray-100
           mt-4
           sm:row-start-2
           sm:row-span-1

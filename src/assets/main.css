@@ -17,6 +17,7 @@ p {
 }
 
 .main-wrapper {
+  @apply bg-white;
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: repeat(5, auto);
@@ -29,6 +30,10 @@ p {
   @apply col-gap-8;
   max-width: 48rem;
   margin: 0 auto;
+}
+
+body .flickity-viewport {
+  overflow: visible;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +61,20 @@ p {
   .main-wrapper {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(3, auto);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .main-wrapper {
+    @apply bg-textPrimary;
+  }
+
+  .section__title {
+    /* @apply text-gray-300; */
+  }
+
+  .icon-link {
+    filter: brightness(4.5) saturate(0);
   }
 }
 

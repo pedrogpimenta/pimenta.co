@@ -50,7 +50,7 @@ const FeaturedProjects = ({ sectionTitle }) => {
   }
 
   return (
-    <section className={`section sm:col-span-2 xl:col-span-3`}>
+    <section className={`section sm:col-span-2 xl:col-span-3 overflow-hidden`}>
       <h1 className={`section__title`}>
         {sectionTitle}
       </h1>
@@ -69,17 +69,17 @@ const FeaturedProjects = ({ sectionTitle }) => {
                 key={project.id}
                 className={`box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8`}
                 >
-                <Link to={`/project/${slugify(project.Title)}`}>
+                <Link
+                  to={`/project/${slugify(project.Title)}`}
+                  className={`inline-block transition-margin duration-300 ease-out hover:-mt-2`}
+                >
                   <img
                     src={project.FeaturedImage.publicURL}
                     alt={`${project.Title} logo`}
-                    className={`rounded-lg overflow-hidden`}
-                    style={{
-                      boxShadow: '0px 8px 18px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.08)'
-                    }}
+                    className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out hover:-mb-1 rounded-lg overflow-hidden`}
                   />
                   <div className={`
-                    text-sm font-medium leading-tight mx-2 sm:mx-4 mt-4
+                    text-sm font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
                   `}>
                     {project.Description}
                   </div>

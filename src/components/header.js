@@ -9,7 +9,7 @@ const Header = ({ siteTitle, siteSubtitle, socialLinks }) => (
     <div
     >
       <h1
-        className={`text-2xl font-black text-gray-800`}>
+        className={`text-2xl font-black text-textPrimary dark:text-gray-100`}>
         {siteTitle}
       </h1>
       <div
@@ -29,8 +29,13 @@ const Header = ({ siteTitle, siteSubtitle, socialLinks }) => (
                 href={link.URL}
                 title={link.Text}
                 target={link.Target}
+                
               >
-                <img src={link.Icon.publicURL} alt={link.Text}></img>
+                <img
+                  src={link.Icon.publicURL}
+                  alt={link.Text}
+                  className={`icon-link`}
+                />
               </a>
             </li>
           )
