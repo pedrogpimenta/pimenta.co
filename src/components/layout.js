@@ -33,7 +33,9 @@ const Layout = ({ children }) => {
           },
         },
         ProjectsTitle,
-        projects,
+        projects {
+          id
+        },
         AboutMeTitle,
         AboutMeContent,
         MySkills {

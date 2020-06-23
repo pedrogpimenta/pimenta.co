@@ -66,7 +66,7 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
           static // default false
         >
           {projects.map((project) => {
-            const thisProjectIndex = data.allStrapiProjects.nodes.findIndex(thisProject => thisProject.strapiId === project)
+            const thisProjectIndex = data.allStrapiProjects.nodes.findIndex(thisProject => thisProject.strapiId === project.id)
             const projectData = data.allStrapiProjects.nodes[thisProjectIndex]
 
             return (
