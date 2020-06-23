@@ -1,8 +1,8 @@
 @tailwind base;
 
 body {
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
 }
 
 body .flickity-viewport {
@@ -28,13 +28,13 @@ p {
 .main-wrapper {
   @apply bg-white;
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 100%;
   grid-template-rows: repeat(5, auto);
 }
 
 .project-wrapper {
   display: grid;
-  grid-template-columns: 100vw;
+  grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
   @apply col-gap-8;
   max-width: 48rem;

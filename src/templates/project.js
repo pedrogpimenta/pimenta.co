@@ -2,6 +2,7 @@ import React from "react"
 import { navigate, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ReactMarkdown from "react-markdown"
 
 const handleMainClick = () => {
   navigate(`/`)
@@ -33,7 +34,7 @@ const ProjectTemplate = ({ data }) => (
           relative
           mt-32
           px-4 sm:px-8
-          py-6 sm py-8
+          py-6 sm:py-8
           rounded-lg
           bg-white
           dark:bg-textPrimary
@@ -114,7 +115,9 @@ const ProjectTemplate = ({ data }) => (
           sm:col-start-2
           sm:col-span-1
         `}>
-          {data.strapiProjects.Content}
+          <ReactMarkdown
+            source={data.strapiProjects.Content}
+          />
         </div>
         {data.strapiProjects.Images &&
           <div className={`

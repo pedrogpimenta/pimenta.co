@@ -33,6 +33,7 @@ const Layout = ({ children }) => {
           },
         },
         ProjectsTitle,
+        projects,
         AboutMeTitle,
         AboutMeContent,
         MySkills {
@@ -66,6 +67,7 @@ const Layout = ({ children }) => {
       {children}
       <FeaturedProjects
         sectionTitle={data.strapiHome.ProjectsTitle}
+        projects={data.strapiHome.projects}
       />
       <AboutMe
         aboutMeTitle={data.strapiHome.AboutMeTitle}
