@@ -26,6 +26,7 @@ const Header = ({ siteTitle, siteSubtitle, socialLinks }) => (
               className={`inline-block pr-4`}
             >
               <a
+                className={`link`}
                 href={link.URL}
                 title={link.Text}
                 target={link.Target}

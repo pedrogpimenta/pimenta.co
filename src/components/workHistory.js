@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const WorkHistory = ({ workHistoryTitle, jobs }) => (
-  <section className={`section`}>
+  <section className={`section sm:col-span-1 xl:col-span-1`}>
     <h1 className={`section__title`}>
       {workHistoryTitle}
     </h1>
@@ -24,6 +24,14 @@ const WorkHistory = ({ workHistoryTitle, jobs }) => (
           )
         })}
       </ul>
+      <a
+        className={`link font-semibold text-textPrimary dark:text-gray-100`}
+        href={`https://www.linkedin.com/in/pedrogpimenta/`}
+        title={`LinkedIn Profile`}
+        target={`_blank`}
+      >
+        For more work info visit LinkedIn
+      </a>
     </div>
   </section>
 )

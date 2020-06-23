@@ -36,6 +36,7 @@ const ProjectTemplate = ({ data }) => (
           py-6 sm py-8
           rounded-lg
           bg-white
+          dark:bg-textPrimary
           z-20
         `}
         style={{boxShadow: `0px -10px 68px rgba(0, 0, 0, 0.28), 0px -1px 8px rgba(0, 0, 0, 0.08)`}}
@@ -80,9 +81,10 @@ const ProjectTemplate = ({ data }) => (
                       href={link.URL}
                       title={link.Text}
                       target={link.Target}
-                      className={`flex`}
+                      className={`link flex`}
                     >
                       <img
+                        className={`icon-link`}
                         src={link.Icon.publicURL}
                         alt={link.Text}
                       />
@@ -106,6 +108,7 @@ const ProjectTemplate = ({ data }) => (
           text-textPrimary 
           dark:text-gray-100
           mt-4
+          sm:mt-0
           sm:row-start-2
           sm:row-span-1
           sm:col-start-2

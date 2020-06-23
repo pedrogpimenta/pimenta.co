@@ -49,6 +49,7 @@ const Layout = ({ children }) => {
         BlogTitle,
         Posts {
           PostTitle,
+          PostDescription,
           PostURL
         }
       },

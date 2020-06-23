@@ -81,7 +81,7 @@ const FeaturedProjects = ({ sectionTitle }) => {
                     className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out hover:-mb-1 rounded-lg overflow-hidden`}
                   />
                   <div className={`
-                    text-sm font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
+                    font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
                   `}>
                     {project.Description}
                   </div>

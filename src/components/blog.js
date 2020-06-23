@@ -11,7 +11,18 @@ const Blog = ({ blogTitle, posts }) => (
         {posts.map(post => {
           return (
             <li key={post.id} className={`my-6 first:mt-2`}>
-              {post.PostTitle}
+              <a
+                className={`link`}
+                href={post.PostURL}
+                target={`_blank`}
+              >
+                <div className={`font-bold text-lg text-textPrimary dark:text-gray-100`}>
+                  {post.PostTitle}
+                </div>
+                <div className={`text-textSecondary`}>
+                  {post.PostDescription}
+                </div>
+              </a>
             </li>
           )
         })}

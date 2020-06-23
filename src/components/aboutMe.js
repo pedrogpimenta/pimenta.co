@@ -3,7 +3,7 @@ import React from "react"
 import ReactMarkdown from "react-markdown"
 
 const aboutMe = ({ aboutMeTitle, aboutMeContent, aboutMeSkills }) => (
-  <section className={`section`}>
+  <section className={`section sm:col-span-2 xl:col-span-1`}>
     <h1 className={`section__title`}>
       {aboutMeTitle}
     </h1>
