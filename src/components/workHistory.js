@@ -30,7 +30,9 @@ const WorkHistory = ({ workHistoryTitle, jobs }) => (
         title={`LinkedIn Profile`}
         target={`_blank`}
       >
-        For more work info visit LinkedIn.com
+        <span className={`text`}>
+          For more work info, visit LinkedIn.com
+        </span>
       </a>
     </div>
   </section>

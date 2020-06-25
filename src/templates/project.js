@@ -91,6 +91,7 @@ const ProjectTemplate = ({ data }) => (
                       />
                       <span
                         className={`
+                          text
                           text-textPrimary
                           dark:text-gray-100
                           font-bold

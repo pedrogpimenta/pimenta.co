@@ -28,6 +28,7 @@ const Layout = ({ children }) => {
           Text,
           URL,
           id,
+          Target,
           Icon {
             publicURL,
           },

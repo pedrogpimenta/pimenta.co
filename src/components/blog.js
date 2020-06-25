@@ -16,10 +16,10 @@ const Blog = ({ blogTitle, posts }) => (
                 href={post.PostURL}
                 target={`_blank`}
               >
-                <div className={`font-bold text-lg text-textPrimary dark:text-gray-100`}>
+                <div className={`text font-bold text-lg text-textPrimary dark:text-gray-100`}>
                   {post.PostTitle}
                 </div>
-                <div className={`text-textSecondary`}>
+                <div className={`text text-textSecondary`}>
                   {post.PostDescription}
                 </div>
               </a>

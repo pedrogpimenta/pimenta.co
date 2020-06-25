@@ -72,19 +72,19 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
             return (
               <div
                 key={projectData.id}
-                className={`box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8`}
+                className={`featured-project box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8`}
                 >
                 <Link
                   to={`/project/${slugify(projectData.Title)}`}
-                  className={`inline-block transition-margin duration-300 ease-out hover:-mt-2`}
+                  className={`inline-block transition-margin duration-300 ease-out`}
                 >
                   <img
                     src={projectData.FeaturedImage.publicURL}
                     alt={`${projectData.Title} logo`}
-                    className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out hover:-mb-1 rounded-lg overflow-hidden`}
+                    className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out rounded-lg overflow-hidden`}
                   />
                   <div className={`
-                    font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
+                    text font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
                   `}>
                     {projectData.Description}
                   </div>
