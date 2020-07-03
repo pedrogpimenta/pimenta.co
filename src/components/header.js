@@ -4,7 +4,7 @@ import React from "react"
 const Header = ({ siteTitle, siteSubtitle, socialLinks }) => (
 
   <header
-    className={`px-4 sm:px-8 mt-6 mb-8 sm:col-span-2 xl:col-span-3`}
+    className={`px-4 sm:px-12 lg:px-20 mt-6 mb-8 sm:col-span-2 xl:col-span-3`}
   >
     <div
     >

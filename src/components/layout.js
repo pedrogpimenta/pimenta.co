@@ -39,6 +39,7 @@ const Layout = ({ children }) => {
         },
         AboutMeTitle,
         AboutMeContent,
+        MySkillsTitle,
         MySkills {
           id,
           Skill,
@@ -61,7 +62,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={`main-wrapper relative h-full py-6`}>
+    <div className={`main-wrapper relative h-full py-6 sm:py-10`}>
       <Header
         siteTitle={data.strapiHome.SiteTitle}
         siteSubtitle={data.strapiHome.SiteDescription}
@@ -75,16 +76,27 @@ const Layout = ({ children }) => {
       <AboutMe
         aboutMeTitle={data.strapiHome.AboutMeTitle}
         aboutMeContent={data.strapiHome.AboutMeContent}
+        mySkillsTitle={data.strapiHome.MySkillsTitle}
         aboutMeSkills={data.strapiHome.MySkills}
       />
-      <WorkHistory
-        workHistoryTitle={data.strapiHome.WorkHistoryTitle}
-        jobs={data.strapiHome.Job}
-      />
-      <Blog
-        blogTitle={data.strapiHome.BlogTitle}
-        posts={data.strapiHome.Posts}
-      />
+      <div className={`section`}>
+        <div className={`section__content`}>
+          <div className={`lg:flex mt-16 mb-8`}>
+            <div className={`lg:flex-1`}>
+              <WorkHistory
+                workHistoryTitle={data.strapiHome.WorkHistoryTitle}
+                jobs={data.strapiHome.Job}
+              />
+            </div>
+            <div className={`lg:flex-1 mt-16 lg:mt-0`}>
+              <Blog
+                blogTitle={data.strapiHome.BlogTitle}
+                posts={data.strapiHome.Posts}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

@@ -52,7 +52,7 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
   }
 
   return (
-    <section className={`section sm:col-span-2 xl:col-span-3 overflow-hidden`}>
+    <section className={`section overflow-hidden`}>
       <h1 className={`section__title`}>
         {sectionTitle}
       </h1>
@@ -72,7 +72,7 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
             return (
               <div
                 key={projectData.id}
-                className={`featured-project box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-8 sm:last:pr-8`}
+                className={`featured-project box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-10 sm:last:pr-8`}
                 >
                 <Link
                   to={`/project/${slugify(projectData.Title)}`}

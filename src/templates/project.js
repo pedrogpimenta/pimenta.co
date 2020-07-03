@@ -130,7 +130,7 @@ const ProjectTemplate = ({ data }) => (
             <ul>
               {data.strapiProjects.Images.map(image => {
                 return (
-                  <li>
+                  <li key={image.id}>
                     <img src={image.url} alt={`Project screenshot`} />
                   </li>
                 )
