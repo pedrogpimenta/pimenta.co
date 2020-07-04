@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import ReactMarkdown from "react-markdown"
 
 const handleMainClick = () => {
-  navigate(`/`)
+  navigate(-1)
 }
 
 const ProjectTemplate = ({ data }) => (
