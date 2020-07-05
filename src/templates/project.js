@@ -1,5 +1,6 @@
 import React from "react"
-import { navigate, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { navigate } from '@reach/router'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactMarkdown from "react-markdown"
