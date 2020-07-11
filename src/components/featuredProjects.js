@@ -27,7 +27,7 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
         {sectionTitle}
       </h1>
       <div
-        className={`flex flex-wrap md:mx-10 lg:mx-16`}
+        className={`flex flex-wrap sm:mx-6 lg:mx-16`}
       >
         {projects.map((project) => {
           const thisProjectIndex = data.allStrapiProjects.nodes.findIndex(thisProject => thisProject.strapiId === project.id)
