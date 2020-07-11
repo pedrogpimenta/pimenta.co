@@ -47,9 +47,6 @@ const ProjectTemplate = ({ data }) => (
             src={data.strapiProjects.FeaturedImage.publicURL}
             alt={`${data.strapiProjects.Title} logo`}
             className={`rounded-lg overflow-hidden`}
-            style={{
-              boxShadow: '0px 8px 18px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.08)'
-            }}
           />
         </div>
         <div>
@@ -130,7 +127,10 @@ const ProjectTemplate = ({ data }) => (
             <ul>
               {data.strapiProjects.Images.map(image => {
                 return (
-                  <li key={image.id}>
+                  <li
+                    key={image.id}
+                    className={`border-2 border-gray-300 mt-2`}
+                  >
                     <img src={image.url} alt={`Project screenshot`} />
                   </li>
                 )

@@ -2,8 +2,6 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import Flickity from "react-flickity-component"
-import "flickity/css/flickity.css"
 import slugify from "slugify"
 
 const FeaturedProjects = ({ sectionTitle, projects }) => {
@@ -13,7 +11,6 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
         nodes {
           id,
           strapiId,
-          Published,
           Title,
           Description,
           FeaturedImage {
@@ -24,75 +21,41 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
     }
   `)
   
-  const flickityShouldDrag = () => {
-    if (typeof window !== `undefined`) {
-      const projectsLength = projects.length
-      const projectWidth = 288
-      const flickityWidth = (projectWidth * projectsLength) + (8 * 2 * projectsLength) + (8 * 2)
-      const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  
-      return flickityWidth > viewportWidth
-    } else {
-      return true
-    }
-  }
-
-  const flickityOptions = {
-    draggable: flickityShouldDrag(),
-    freeScroll: false,
-    contain: true,
-    groupCells: true,
-    pageDots: false,
-    prevNextButtons: false,
-    selectedAttraction: 0.2,
-    friction: 1,
-    // watchCSS: true,
-    resize: true,
-    cellAlign: 'left',
-  }
-
   return (
     <section className={`section overflow-hidden`}>
       <h1 className={`section__title`}>
         {sectionTitle}
       </h1>
-      <div>
-        <Flickity
-          className={'carousel'} // default ''
-          elementType={'div'} // default 'div'
-          options={flickityOptions} // takes flickity options {}
-          disableImagesLoaded={false} // default false
-          reloadOnUpdate={true} // default false
-          static // default false
-        >
-          {projects.map((project) => {
-            const thisProjectIndex = data.allStrapiProjects.nodes.findIndex(thisProject => thisProject.strapiId === project.id)
-            const projectData = data.allStrapiProjects.nodes[thisProjectIndex]
+      <div
+        className={`flex flex-wrap sm:mx-6 lg:mx-16`}
+      >
+        {projects.map((project) => {
+          const thisProjectIndex = data.allStrapiProjects.nodes.findIndex(thisProject => thisProject.strapiId === project.id)
+          const projectData = data.allStrapiProjects.nodes[thisProjectIndex]
 
-            return (
-              <div
-                key={projectData.id}
-                className={`featured-project box-content inline-block w-64 xxxs:w-72 sm:w-84 pl-4 last:pr-4 sm:pl-10 sm:last:pr-8`}
-                >
-                <Link
-                  to={`/project/${slugify(projectData.Title)}`}
-                  className={`inline-block transition-margin duration-300 ease-out`}
-                >
-                  <img
-                    src={projectData.FeaturedImage.publicURL}
-                    alt={`${projectData.Title} logo`}
-                    className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out rounded-lg overflow-hidden`}
-                  />
-                  <div className={`
-                    text font-medium leading-tight mx-2 sm:mx-4 mt-4 text-textPrimary dark:text-gray-100
-                  `}>
-                    {projectData.Description}
-                  </div>
-                </Link>
-              </div>
-            )
-          })}
-        </Flickity>
+          return (
+            <div
+              key={projectData.id}
+              className={`featured-project box-border w-1/2 sm:w-1/3 md:w-1/4 xl:w-64 px-2 pb-4`}
+              >
+              <Link
+                to={`/project/${slugify(projectData.Title)}`}
+                className={`inline-block transition-margin duration-300 ease-out`}
+              >
+                <img
+                  src={projectData.FeaturedImage.publicURL}
+                  alt={`${projectData.Title} logo`}
+                  className={`shadow-project-m hover:shadow-project-xl transition-all duration-300 ease-out rounded-lg overflow-hidden`}
+                />
+                <div className={`
+                  text text-sm sm:text-md font-medium leading-tight mx-2 sm:mx-4 mt-2 text-textPrimary dark:text-gray-100
+                `}>
+                  {projectData.Description}
+                </div>
+              </Link>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
