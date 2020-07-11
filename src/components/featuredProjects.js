@@ -13,7 +13,6 @@ const FeaturedProjects = ({ sectionTitle, projects }) => {
         nodes {
           id,
           strapiId,
-          Published,
           Title,
           Description,
           FeaturedImage {
